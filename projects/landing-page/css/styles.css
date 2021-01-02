@@ -50,7 +50,7 @@ main {
     margin: 10vh 1em 10vh;
 }
 
-.main-hero {
+.main-h ero {
     min-height: 40vh;
     padding-top: 3em;
 }
@@ -83,11 +83,20 @@ section {
     color: #000;
 }
 
-.navbar__menu .menu__link:hover {
+.navbar__menu .menu__link:hover{
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
 }
+
+.menu__link.menu__active{
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+
+
 
 /* Header Styles */
 .page__header {
@@ -125,10 +134,11 @@ section {
 }
 
 section:nth-of-type(even) .landing__container {
-    margin-right: 0;
+    margin-right: 10;
     margin-left: auto;
     text-align: right; 
 }
+
 
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
@@ -136,10 +146,11 @@ section:nth-of-type(even) .landing__container {
 section:nth-of-type(odd) .landing__container::before {
     content: '';
     background: rgba(255, 255, 255, 0.187);
+    background: red;
     position: absolute;
     z-index: -5;
-    width: 20vh;
-    height: 20vh;
+    width: 10vh;
+    height: 10vh;
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
@@ -152,7 +163,7 @@ section:nth-of-type(even) .landing__container::before {
     position: absolute;
     top: 3em;
     right: 3em;
-    z-index: -5;
+    z-index: 0;
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
@@ -175,11 +186,13 @@ section:nth-of-type(3n) .landing__container::after {
     transition: ease 0.5s all;
 }
 
+
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
+    background: orange;
     right: 20vw;
     bottom: -5em;
     z-index: -5;
